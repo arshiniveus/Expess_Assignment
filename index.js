@@ -46,8 +46,7 @@ app.get('/user', (req, res) => {
 app.post('/', (req, res) => {
     res.sendFile(__dirname + '/' + filename);
     console.log(`boodyyy` + JSON.stringify(req.body));
-    const jsonData = JSON.stringify(req.body);
-    const Array = JSON.parse(jsonData);
+
     const result = [ { data: req.body, status: 200, message: 'data fetched successfully' } ];
     console.log(result)
     res.send(result)
