@@ -7,9 +7,6 @@ const filename = 'index.html'
 const url = path.join(__dirname, filename)
 
 console.log(url);
-
-// app.use(express.static(__dirname));
-
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: true }))
 
@@ -45,7 +42,6 @@ app.get('/user', (req, res) => {
 
 //POST api which acccepts a JSON data. Return an array of data.
 app.post('/', (req, res) => {
-    // res.sendFile(__dirname + '/' + filename);
     console.log(`JSON Data:` + JSON.stringify(req.body));
 
     const result = [ { data: req.body, status: 200, message: 'data fetched successfully' } ];
