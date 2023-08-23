@@ -10,7 +10,7 @@ console.log(url);
 app.use(express.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
-// GET with Path Parameters
+// GET with Path Parameters :--> http://localhost:8080/user/100/arshiya
 app.get('/user/:id/:val', (req, res) => {
     try {
         let myObject = {
@@ -25,7 +25,7 @@ app.get('/user/:id/:val', (req, res) => {
     }
 });
 
-// GET with Query Parameters
+// GET with Query Parameters:--->http://localhost:8080/user?id=100&val=arshiya
 app.get('/user', (req, res) => {
     try {
         let myObject2 = {
